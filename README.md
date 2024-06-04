@@ -57,7 +57,6 @@ $ git clone git@github.com:Riwi-io-Medellin/Gamification-Auth.git
 ## 2. Install dependencies
 ```bash
 $ npm install
-# or
 $ npm i
 ```
 
@@ -73,35 +72,6 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-Endpoints
-Prefix: (Assuming no specific prefix based on the log)
-
-Tournaments:
-```bash
-/create (POST): Creates a new tournament.
-/update/:id (PUT): Updates an existing tournament by ID.
-/delete/:id (DELETE): Deletes a tournament by ID.
-/all (GET): Retrieves all tournaments.
-/add-player/:playerId/:tournamentId (POST): (Potentially) Adds a player to a tournament.
-```
-
-Players: (Assuming these endpoints exist based on controller name)
-```bash
-/create (POST): (Potentially) Creates a new player.
-/update/:id (PUT): (Potentially) Updates a player by ID.
-/all (GET): (Potentially) Retrieves all players.
-/id (GET): (Potentially) Retrieves a specific player by ID.
-```
-# Swagger
-``` bash
-http://localhost:{PORT}/api-doc
-```
-
-# Postman collection
-
-[Auth Postman]()
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
