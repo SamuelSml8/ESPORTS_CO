@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PlayersModule } from './players/players.module';
+import { ResultsModule } from './results/results.module';
+import { TournamentModule } from './tournament/tournament.module';
 
 /* Here we load the environment variables from our .env file and globalize them for the whole project. In turn we establish the connection to our MySQL database using TypeOrm (the DB is in clever cloud). */
 @Module({
@@ -16,6 +19,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    PlayersModule,
+    ResultsModule,
+    TournamentModule,
   ],
   controllers: [],
   providers: [],
