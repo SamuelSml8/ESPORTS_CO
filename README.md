@@ -24,16 +24,43 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The Esports Tournament Management API aims to provide a comprehensive solution for managing and organizing esports tournaments in Colombia. The API will cater to various stakeholders, including tournament organizers, participants, and spectators, enabling seamless interaction and effective tournament administration.
 
-## Installation
+## Features
+Tournament Management:
 
+- Create new tournaments (/tournament/create, POST)
+- Update existing tournaments (/tournament/update/:id, PUT)
+- Delete tournaments (/tournament/delete/:id, DELETE)
+- Retrieve all tournaments (/tournament/all, GET)
+- (Potentially) Add players to tournaments (/tournament/add-player/:playerId/:tournamentId, POST)
+
+Player Management:
+
+- (Potentially) Create players (/players/create, POST) - Inferred from controller name
+- (Potentially) Update player information (/players/update/:id, PUT) - Inferred from controller name
+- (Potentially) Retrieve all players (/players/all, GET) - Inferred from controller name
+- (Potentially) Retrieve a specific player (/players/:id, GET) - Inferred from controller name
+
+
+# Installation
+
+## 1. Clone this repository
+```bash
+# HTTP
+$ git clone https://github.com/Riwi-io-Medellin/Gamification-Auth.git
+
+# SSH
+$ git clone git@github.com:Riwi-io-Medellin/Gamification-Auth.git
+```
+
+## 2. Install dependencies
 ```bash
 $ npm install
 $ npm i
 ```
 
-## Running the app
+## 4. Running the app
 
 ```bash
 # development
@@ -45,7 +72,6 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
