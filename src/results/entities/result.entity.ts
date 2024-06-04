@@ -10,7 +10,7 @@ export class Result {
   @ManyToOne(() => Player, (player) => player.id)
   player: Player;
 
-  @ManyToOne(() => Tournament, (tournament) => tournament.results)
+  @ManyToOne(() => Tournament, (tournament) => tournament.players)
   tournament: Tournament;
 
   @Column({ type: 'int' })
