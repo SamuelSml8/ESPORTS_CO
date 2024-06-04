@@ -15,7 +15,7 @@ export class Tournament {
 
   @OneToMany(() => Result, (result) => result.tournament)
   @JoinTable()
-  players: Player[];
+  players?: Player[];
 
   @DeleteDateColumn()
   deletedAt?: Date;
