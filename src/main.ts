@@ -1,13 +1,17 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-/* Swagger implementation in main.ts to project documentation */
+  app.useGlobalPipes(new ValidationPipe());
+  /* Swagger implementation in main.ts to project documentation */
   const config = new DocumentBuilder()
     .setTitle('ESPORTS API')
-    .setDescription('Company dedicated to the management of video game (esports) tournaments in Colombia, has the need to implement an API for tournament management. | Tournament Van Rossum')
+    .setDescription(
+      'Company dedicated to the management of video game (esports) tournaments in Colombia, has the need to implement an API for tournament management. | Tournament Van Rossum',
+    )
     .setVersion('1.0')
     .addTag('eSports')
     .build();
