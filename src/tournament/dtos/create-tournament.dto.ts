@@ -25,8 +25,7 @@ export class CreateTournamentDto {
   })
   description: string;
 
-  @ArrayNotEmpty({ message: 'La lista de jugadores no puede estar vacía' })
   @ValidateNested({ each: true })
   @Type(() => CreatePlayerDto)
-  players: CreatePlayerDto[];
+  players?: CreatePlayerDto[];
 }
