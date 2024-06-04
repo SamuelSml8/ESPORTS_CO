@@ -24,7 +24,7 @@ export class Player {
   @Column({ type: 'varchar', length: 50, nullable: true })
   team: string;
 
-  @ManyToMany(() => Tournament, (tournament) => tournament.participants)
+  @ManyToMany(() => Tournament, (tournament) => tournament.players)
   @JoinTable()
   tournaments: Tournament[];
 }
