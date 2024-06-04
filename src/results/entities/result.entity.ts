@@ -7,7 +7,7 @@ export class Result {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Player, (player) => player.id)
+  @ManyToOne(() => Player, (player) => player.tournaments)
   player: Player;
 
   @ManyToOne(() => Tournament, (tournament) => tournament.players)

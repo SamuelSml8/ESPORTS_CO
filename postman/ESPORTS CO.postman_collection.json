@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "734f07af-f8bd-4766-8bc6-fa562563fdc8",
+		"name": "ESPORTS CO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27402576"
+	},
+	"item": [
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Create player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"age\": 18,\r\n    \"country\": \"colombia\",\r\n    \"team\": \"team test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/players/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update player",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test 2\",\r\n    \"age\": 19,\r\n    \"country\": \"argentina\",\r\n    \"team\": \"team test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/players/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get player by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/players/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all players",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/players/all"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tournaments",
+			"item": [
+				{
+					"name": "Create tournament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test tournament 3\",\r\n    \"description\": \"test description 3\",\r\n    \"players\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/tournament/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update tournament",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test tournament 3 updated\",\r\n    \"description\": \"test description 3 updated\",\r\n    \"players\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/tournament/update/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete tournament",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/tournament/delete/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add player to tournament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/tournament/add-player/4/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tournaments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/tournament/all"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

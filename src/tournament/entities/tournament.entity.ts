@@ -1,6 +1,6 @@
 import { Player } from 'src/players/entities/player.entity';
 import { Result } from 'src/results/entities/result.entity';
-import { Column, Entity, JoinTable, OneToMany, PrimaryGeneratedColumn, DeleteDateColumn } from 'typeorm';
+import { Column, Entity, JoinTable, OneToMany, PrimaryGeneratedColumn, DeleteDateColumn, ManyToMany } from 'typeorm';
 
 @Entity('tournaments')
 export class Tournament {
@@ -13,7 +13,7 @@ export class Tournament {
   @Column({ type: 'varchar', length: 150 })
   description: string;
 
-  @OneToMany(() => Result, (result) => result.tournament)
+  @ManyToMany(() => Player, (player) => player.tournaments)
   @JoinTable()
   players?: Player[];
 
